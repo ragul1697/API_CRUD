@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>CRUP API - XHR</title>
+  </head>
+  <body>
+    <!-- BODY CONTENT -->
+    <div class="container">
+      <div class="heading-container">
+        <h2>CRUD using API Data</h2>
+      </div>
+      <div class="form-container">
+        <form action="javascript:void(0);" method="POST">
+          <div class="form-group">
+            <label for="Name">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="userName"
+              placeholder="Enter your Username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="userEmail"
+              placeholder="Enter your Email"
+              required
+            />
+          </div>
+          <button type="submit" id="mybtn" class="btn btn-primary" onclick="saveorupdate()">Save</button>
+        </form>
+      </div>
+
+      <div class="table-container">
+        <h3 id="counter"></h3>
+
+        <table class="table table-bordered">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+          </tr>
+          <tbody id="users"></tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <!-- JS SCRIPTS -->
+    <script src="./xhr.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+      getUsers();
+    </script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
